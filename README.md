@@ -1,5 +1,5 @@
 ## Overview
-Repository creates for fast running development process with configuration, which are the same from project to project.
+Sorry, money making
 
 ## Building
 ...
@@ -12,6 +12,8 @@ Can be found in [RELEASE_NOTES](RELEASE_NOTES.md).
 
 ## Authors
 * Artyom Markov - [Kartbllansh](https://github.com/Kartbllansh)
+* SURNIC
+* ANDRUSHA
 
 ## Acknowledgments
 ...

@@ -12,7 +12,7 @@ Can be found in [RELEASE_NOTES](RELEASE_NOTES.md).
 
 ## Authors
 * Artyom Markov - [Kartbllansh](https://github.com/Kartbllansh)
-* SURNIC
+* Kozhinov Pavel - [oAnthocyane](https://github.com/oAnthocyane)
 * ANDRUSHA
 
 ## Acknowledgments

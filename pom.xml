@@ -13,9 +13,19 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Chaverma</name>
 	<description>Yam, yam....</description>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>DataBase</module>
+		<module>Telegram</module>
+		<module>Rest</module>
+	</modules>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -25,7 +35,8 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<version>1.18.22</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

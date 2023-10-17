@@ -3,13 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.github.Kartbllansh</groupId>
+        <artifactId>chaverma-framework</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.chaverma</groupId>
-    <artifactId>Telegram</artifactId>
+    <artifactId>TelegramClient</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Telegram</name>
     <description>Telegram</description>
@@ -24,8 +23,20 @@
             <version>${telegrambot.starter.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambotsextensions</artifactId>
+            <version>${telegrambot.starter.version}</version> <!-- Use the latest version -->
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -33,6 +44,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
+            <version>5.2.1</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

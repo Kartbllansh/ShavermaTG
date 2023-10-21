@@ -2,6 +2,7 @@ package com.chaverma.rest.response;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class ResponseHandler {
         Map<String, Object> response = new HashMap<>();
         response.put("data", responseData);
         response.put("message", message);
-        response.put("httpStatus", httpStatus);
+        response.put("httpStatus", httpStatus.value());
 
         log.info("Successfully response with message: {} and status: {}", message, httpStatus);
 

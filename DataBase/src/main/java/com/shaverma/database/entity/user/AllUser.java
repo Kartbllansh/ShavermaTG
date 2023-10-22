@@ -10,11 +10,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "User")
-public class User {
+@Table(name = "AllUser")
+public class AllUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @OneToOne
     @JoinColumn(name = "telegramUser")
     private TelegramUser telegramUser;

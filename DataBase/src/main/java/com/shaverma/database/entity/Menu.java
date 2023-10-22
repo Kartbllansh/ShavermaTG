@@ -21,7 +21,7 @@ public class Menu {
     private String typeDish;
     private String nameDish;
     private String price;
-    private BigDecimal calories;
+    private Long calories;
 
 
 

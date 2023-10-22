@@ -1,6 +1,6 @@
 package com.shaverma.database.entity;
 
-import com.shaverma.database.entity.user.User;
+import com.shaverma.database.entity.user.AllUser;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,6 +20,6 @@ public class Comment {
     private String comment;
     @ManyToOne
     @JoinColumn(name = "user")
-    private User user;
+    private AllUser user;
 
 }

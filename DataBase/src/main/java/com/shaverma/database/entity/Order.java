@@ -1,6 +1,6 @@
 package com.shaverma.database.entity;
 
-import com.shaverma.database.entity.user.User;
+import com.shaverma.database.entity.user.AllUser;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,7 +24,7 @@ public abstract class Order {
 
     @ManyToOne
     @JoinColumn(name = "user")
-    private User user;
+    private AllUser user;
 
     private LocalDateTime timeOrder;
 

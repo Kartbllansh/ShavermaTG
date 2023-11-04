@@ -28,7 +28,7 @@ public class Order {
 
     private LocalDateTime timeOrder;
 
-    private BigDecimal price;
+    private Double price;
 
     @ManyToMany
     @JoinTable(name = "Order_Menu",

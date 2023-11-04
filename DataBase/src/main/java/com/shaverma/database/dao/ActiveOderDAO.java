@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ActiveOderDAO extends JpaRepository<ActiveOrder, Long> {
+    Long findFirstId();
 }

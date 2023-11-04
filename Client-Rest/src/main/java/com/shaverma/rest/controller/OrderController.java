@@ -1,5 +1,6 @@
 package com.shaverma.rest.controller;
 
+import com.chaverma.api.ApiResponse;
 import com.chaverma.dto.OrderDTO;
 import com.chaverma.response.ResponseHandler;
 import com.shaverma.rest.service.OrderService;
@@ -19,7 +20,7 @@ public class OrderController {
     }
 
     @PostMapping("telegram/{telegramId}")
-    public ResponseEntity<Object> addOrderFromTelegram(@RequestBody OrderDTO orderDTO, @PathVariable long telegramId){
+    public ResponseEntity<ApiResponse<Long>> addOrderFromTelegram(@RequestBody OrderDTO orderDTO, @PathVariable long telegramId){
         long orderId = orderService.addOrderFromTelegram(orderDTO, telegramId);
         return ResponseHandler.responseBuilder("Order was added", HttpStatus.CREATED, orderId);
 

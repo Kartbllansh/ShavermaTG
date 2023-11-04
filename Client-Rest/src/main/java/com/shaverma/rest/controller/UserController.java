@@ -1,6 +1,7 @@
 package com.shaverma.rest.controller;
 
 
+import com.chaverma.api.ApiResponse;
 import com.chaverma.dto.UserDTO;
 
 import com.chaverma.response.ResponseHandler;
@@ -38,7 +39,7 @@ public class UserController {
      * @return the long
      */
     @PostMapping("/telegram/save")
-    public ResponseEntity<Object> addTelegramUser(@RequestBody UserDTO user) {
+    public ResponseEntity<ApiResponse<Long>> addTelegramUser(@RequestBody UserDTO user) {
         long id = userService.saveTelegramUser(user);
         return ResponseHandler.responseBuilder("User was added", HttpStatus.CREATED, id);
     }

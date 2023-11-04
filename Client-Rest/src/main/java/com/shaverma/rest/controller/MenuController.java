@@ -1,5 +1,6 @@
 package com.shaverma.rest.controller;
 
+import com.chaverma.api.ApiResponse;
 import com.chaverma.dto.MenuDTO;
 import com.chaverma.response.ResponseHandler;
 import com.shaverma.database.entity.Menu;
@@ -25,7 +26,7 @@ public class MenuController {
     }
 
     @GetMapping
-    public ResponseEntity<Object> getMenu(){
+    public ResponseEntity<ApiResponse<List<MenuDTO>>> getMenu(){
         List<MenuDTO> menus = menuService.getMenu();
         return ResponseHandler.responseBuilder("All menu was sent", HttpStatus.OK, menus);
     }

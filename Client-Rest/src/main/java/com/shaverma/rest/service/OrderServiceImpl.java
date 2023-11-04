@@ -42,9 +42,7 @@ public class OrderServiceImpl implements OrderService{
        return Order.builder()
                 .dish(toMenus(orderDTO.dish()))
                 .timeOrder(orderDTO.timeOrder())
-                .user(
-                        findTelegramUser(id)
-                )
+                .user(findTelegramUser(id))
                 .price(countPriceMenu(orderDTO.dish()))
                 .build();
     }

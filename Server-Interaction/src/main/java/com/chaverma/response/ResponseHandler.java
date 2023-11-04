@@ -1,5 +1,6 @@
 package com.chaverma.response;
 
+import com.chaverma.api.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -21,12 +22,9 @@ public class ResponseHandler {
      * @param responseData the response data
      * @return the response entity
      */
-    public static ResponseEntity<Object> responseBuilder(String message, HttpStatus httpStatus, Object responseData) {
-        Map<String, Object> response = new HashMap<>();
-        response.put("data", responseData);
-        response.put("message", message);
-        response.put("httpStatus", httpStatus.value());
+    public static <T> ResponseEntity<ApiResponse<T>> responseBuilder(String message, HttpStatus httpStatus, T responseData) {
 
+        ApiResponse<T> response = new ApiResponse<>(responseData, message, httpStatus);
         log.info("Successfully response with message: {} and status: {}", message, httpStatus);
 
         return new ResponseEntity<>(response, httpStatus);

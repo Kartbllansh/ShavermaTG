@@ -1,10 +1,12 @@
 package com.chaverma.telegram.bot.commands;
 
-import com.chaverma.telegram.api.ApiResponse;
+
+import com.chaverma.api.ApiResponse;
 import com.chaverma.telegram.utils.MessageSender;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.bots.AbsSender;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+
 
 abstract public class SubmitCommand {
     private final String successMessage;

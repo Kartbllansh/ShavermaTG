@@ -1,9 +1,10 @@
 package com.chaverma.telegram.bot.commands;
 
 
-import com.chaverma.telegram.api.ApiResponse;
-import com.chaverma.telegram.api.commands.AdderUser;
-import com.chaverma.telegram.dto.UserDTO;
+import com.chaverma.api.ApiResponse;
+import com.chaverma.api.commands.AdderUser;
+import com.chaverma.dto.UserDTO;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.chaverma.rest.security;
+package com.shaverma.rest.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

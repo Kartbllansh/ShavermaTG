@@ -1,10 +1,10 @@
-package com.chaverma.rest.controller;
+package com.shaverma.rest.controller;
 
 
 import com.chaverma.dto.UserDTO;
 
 import com.chaverma.response.ResponseHandler;
-import com.chaverma.rest.service.UserService;
+import com.shaverma.rest.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

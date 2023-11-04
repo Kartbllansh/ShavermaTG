@@ -1,4 +1,4 @@
-package com.chaverma.rest.service;
+package com.shaverma.rest.service;
 
 import com.chaverma.dto.UserDTO;
 

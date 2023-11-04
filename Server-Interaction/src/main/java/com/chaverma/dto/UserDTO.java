@@ -7,14 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 
-public class UserDTO {
-    private long id;
 
-    private String username;
-
-    private Date dateRegistration;
-}
+public record UserDTO(
+        Long telegramId, String firstName, String lastName, String username
+){}

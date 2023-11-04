@@ -1,4 +1,4 @@
-package com.chaverma.rest;
+package com.shaverma.rest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

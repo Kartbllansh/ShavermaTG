@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.extensions.bots.commandbot.commands.IBotCommand;
 import org.telegram.telegrambots.meta.api.objects.Message;
+import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.bots.AbsSender;
 
 import java.util.Date;
@@ -36,8 +37,13 @@ public class Start extends SubmitCommand implements IBotCommand {
     @Override
     public void processMessage(AbsSender absSender, Message message, String[] arguments) {
         long id = message.getFrom().getId();
-        String username = message.getFrom().getUserName();
-        UserDTO userDTO = new UserDTO(id, username, new Date());
+        User user = message.getFrom();
+        String firstName = user.getFirstName();
+        String lastName = user.getLastName();
+        String username = user.getUserName();
+        UserDTO userDTO = new UserDTO(
+                id, firstName, lastName, username
+                );
         ApiResponse<Long> apiResponse = adderUser.execute(userDTO, null);
         printMessage(absSender, message, apiResponse);
     }

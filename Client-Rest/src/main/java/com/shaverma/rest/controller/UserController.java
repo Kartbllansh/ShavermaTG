@@ -37,9 +37,9 @@ public class UserController {
      * @param user the user
      * @return the long
      */
-    @PostMapping("/save")
-    public ResponseEntity<Object> addUser(@RequestBody UserDTO user) {
-        long id = userService.save(user);
+    @PostMapping("/telegram/save")
+    public ResponseEntity<Object> addTelegramUser(@RequestBody UserDTO user) {
+        long id = userService.saveTelegramUser(user);
         return ResponseHandler.responseBuilder("User was added", HttpStatus.CREATED, id);
     }
 }

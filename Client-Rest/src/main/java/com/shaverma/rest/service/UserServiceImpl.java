@@ -5,7 +5,10 @@ import com.shaverma.database.dao.user.TelegramUserDAO;
 import com.shaverma.database.entity.user.TelegramUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 
 /**
@@ -30,10 +33,16 @@ public class UserServiceImpl implements UserService {
      * @return long user id
      */
     @Override
-    public long save(UserDTO user) {
+    public long saveTelegramUser(UserDTO user) {
         return telegramUserDAO.save(
                 toTelegramUserEntity(user)
         ).getId();
+    }
+
+    @Override
+    public TelegramUser findById(Long id) throws RuntimeException{
+        // TODO: Поменять Runtime на свою ошибку
+        return telegramUserDAO.findById(id).orElseThrow(() -> new RuntimeException("USer not found with id: " + id));
     }
 
     private TelegramUser toTelegramUserEntity(UserDTO userDTO){

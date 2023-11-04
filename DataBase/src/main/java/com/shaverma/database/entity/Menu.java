@@ -1,5 +1,6 @@
 package com.shaverma.database.entity;
 
+import com.chaverma.dto.MenuDTO;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,9 +21,16 @@ public class Menu {
 
     private String typeDish;
     private String nameDish;
-    private String price;
+    private Double price;
     private Long calories;
 
+    public MenuDTO toDTO(){
+        return MenuDTO.builder()
+                .typeDish(typeDish)
+                .nameDish(nameDish)
+                .price(price)
+                .calories(calories).build();
 
+    }
 
 }
